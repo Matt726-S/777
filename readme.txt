@@ -2,11 +2,12 @@ A Modification for the Flght Factor Boeing 777 Series.
 
 -Modified by AWTIG, Air Works Technology and Innovations Group.
 
+ONLY COMPATIBLE WITH -200LR!
 COPYRIGHT NOTICE: All files in this package are owned by Flight Factor or AWTIG, copying exact files, reposting, or selling files without Flight Factor's or AWTIG permission is illegal.
 
 HOWEVER, modifying files in the legal area is OK!
 
-VERSION: 0.1 BETA
+VERSION: 0.1.1 BETA
 
 Current Features:
 
@@ -14,9 +15,11 @@ Current Features:
 
 -Sounds that will be used later
 
+-New Loading Screen
+
 Changelog:
 
-No current changelog.
+-Updated Loading Screen
 
 INSTALLATION:
 
