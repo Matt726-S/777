@@ -6,22 +6,24 @@ COPYRIGHT NOTICE: All files in this package are owned by Flight Factor or AWDG, 
 
 HOWEVER, modifying files in the legal area is OK!
 
-VERSION: 0.1.1 BETA
-
-Current Features:
-
--New PFD Artificial Horizon Colors
-
--Sounds that will be used later
-
--New Loading Screen
-
-Changelog:
-
--Updated Loading Screen
-
 INSTALLATION:
 
 Simply drag the files into your Boeing777 install after unzipping. BE SURE TO BACKUP ORIGINAL FILES FIRST IN CASE YOU DON'T LIKE THEM OR IF THERE IS A BUG!!!!!!
 
 Notice: Every time FF makes an update, you must reinstall the mod each time.
+
+CHANGELOG:
+
+VERSION: 0.1.2
+
+-New EICAS textures (WIP)
+-Better PFD textres
+-New Alarms Sounds
+-Removed crappy airport ambience
+-EPIC: New FMOD beta 1.3.0 by MoNlc
+
+VERSION: 0.1.1 BETA
+
+-New PFD Artificial Horizon Colors
+-Sounds that will be used later
+-New Loading Screen
