@@ -27,6 +27,7 @@ ISSUES As of beta v0.1.2:
 -still trying to fix the EICAS texts and digits issue
 -hydraulics page is not scaled like real life
 -Engine symbol on FUEL EICAS page needs to be fixed
+-Fahrenheit got banned from his computer lol so he cant work
 
 CHANGELOG:
 
