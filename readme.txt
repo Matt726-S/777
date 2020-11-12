@@ -15,7 +15,6 @@ Notice: Every time FF makes an update, you must reinstall the mod each time.
 CHANGELOG:
 
 VERSION: 0.1.2
-
 -New EICAS textures (WIP)
 -Better PFD textres
 -New Alarms Sounds
@@ -23,7 +22,6 @@ VERSION: 0.1.2
 -EPIC: New FMOD beta 1.3.0 by MoNlc
 
 VERSION: 0.1.1 BETA
-
 -New PFD Artificial Horizon Colors
 -Sounds that will be used later
 -New Loading Screen
