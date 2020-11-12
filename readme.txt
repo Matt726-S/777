@@ -2,6 +2,8 @@ A Modification for the Flght Factor Boeing 777 Series.
 
 -Modified by AWDG, Air Works Development Group
 
+WARNING: This is the Developer Version. If you download this, you might receive unexpected bugs or messed up features.
+
 COPYRIGHT NOTICE: All files in this package are owned by Flight Factor or AWDG, copying exact files, reposting, or selling files without Flight Factor's or AWDG permission is illegal.
 
 HOWEVER, modifying files in the legal area is OK!
@@ -27,6 +29,7 @@ ISSUES As of beta v0.1.2:
 -still trying to fix the EICAS texts and digits issue
 -hydraulics page is not scaled like real life
 -Engine symbol on FUEL EICAS page needs to be fixed
+-Fahrenheit got banned from his computer lol so he cant work
 
 CHANGELOG:
 
