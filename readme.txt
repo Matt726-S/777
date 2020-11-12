@@ -36,7 +36,7 @@ VERSION: beta v0.1.2
 -Better PFD textres
 -New Alarms Sounds
 -Removed crappy airport ambience
--EPIC: New FMOD beta 1.3.0 by MoNlc
+-EPIC: New FMOD beta 1.2.0 by MoNlc
 
 VERSION: beta v0.1.1
 -New PFD Artificial Horizon Colors
