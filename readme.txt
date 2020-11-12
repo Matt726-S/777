@@ -6,6 +6,14 @@ COPYRIGHT NOTICE: All files in this package are owned by Flight Factor or AWDG, 
 
 HOWEVER, modifying files in the legal area is OK!
 
+Check out our Discord Server for info and updates: https://discord.gg/W4Uym2S
+
+Check out our YouTube channels for updates and us showing our projects:
+
+Fahrenheit's YouTube: https://www.youtube.com/channel/UC6SJ3NetEv9x4p0vCE9Nwug
+
+Nutshell Pilot's YouTube: https://www.youtube.com/channel/UCvuh11w7Kwu15Jg_u3EUnXQ
+
 INSTALLATION:
 
 Simply drag the files into your Boeing777 install after unzipping. BE SURE TO BACKUP ORIGINAL FILES FIRST IN CASE YOU DON'T LIKE THEM OR IF THERE IS A BUG!!!!!!
