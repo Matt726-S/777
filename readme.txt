@@ -20,16 +20,18 @@ Simply drag the files into your Boeing777 install after unzipping. BE SURE TO BA
 
 Notice: Every time FF makes an update, you must reinstall the mod each time.
 
-ISSUES As of beta v0.1.2:
+ISSUES As of beta v0.1.3:
 -Packs sounds too loud
 -Packs can be heard in outside view if you move the camera close enough to the plane
--PFD is broken, the vertical speed indicator is not labeled yet
 -still trying to fix the EICAS texts and digits issue
 -hydraulics page is not scaled like real life
 -Engine symbol on FUEL EICAS page needs to be fixed
 -Fahrenheit got banned from his computer lol so he cant work
 
 CHANGELOG:
+
+VERSION: beta v0.1.3:
+-Removed broken PFD texture
 
 VERSION: beta v0.1.2
 -New EICAS textures (WIP)
