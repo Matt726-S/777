@@ -1,0 +1,383 @@
+1.10.2
+- fixed ground service objects drawing in X-Plane 11.50 (Vulkan) (this time indeed)
+
+1.10.0
+- fixed ground service objects drawing in X-Plane 11.50 (Vulkan)
+- tweaked fuel consumption
+
+1.9.16
+- update interaction system cursors
+- fixed critical issue with BetterPushback interaction on init
+- fixed critical crash on Mac OS 10.14
+- update joystick axes tracking algorithm
+
+1.9.14
+- basic VR support
+- xp11 engine model change
+
+1.9.13
+- technical update to allow for external sound packages
+
+1.9.12
+- fixed an issue with version update method
+
+1.9.11
+- small shaddow fix
+
+1.9.10
+- trivial xp11.10 compatability fix
+
+1.9.9
+- fixed many more marching ants issues
+- added command descriptions
+
+1.9.8
+- ILS but in XP11 fix
+
+1.9.7
+- fixed the machring ants problem
+- fixed the issue with pushback appearing in mid air
+- fixed the brakes issue for xp11
+- added command descriptors
+
+1.9.6
+- fixed the issue with nav database backup
+
+1.9.5
+- fixed the xp11 engine issue
+
+1.9.4
+- fixed a fuel issue when loading with engines running
+- fixed the EFB not working issue when reloading the plane 
+
+1.9.3
+- fixed the avionics not loading issue
+
+1.9.2
+- fixed the APU xp11 bug
+
+1.9.1 xp11 compatability
+- provided xp11 compatability
+- changed the graphical content to fit XP11 features
+- added xp11 spacific splashcreen
+- renamed the acf files to be more logical 
+
+1.8.3 change log (all X-Plane 10.42+ 64bit)
+Note: For this update to work correctly on Windows, you need to install the Visual Studio 2015 redistributables, which you can download here: https://www.microsoft.com/en-us/download/details.aspx?id=48145
+- moved to new SASL version which solves the mac nvidia crash problem
+- fixed teardrop entries into left-hand holdings not working with certain inbound tracks
+- fixed ILS excursion due to incorrect autopilot override with some missed approach procedures
+- updated Mac plugin to work safely on systems running OSX 10.10 Yosemite and newer
+- corrected some autopilot mode selections on the ground
+- place-bearing-distance waypoints are now limited to a maximal distance of 512nm, as per the real system
+
+
+1.8.0  change log (all X-Plane 10.30+ 64bit)
+- added mouse wheel option
+- added new panel 3d and textures (based partially on pumper's add-on)
+- added right side mirror control and MFD screen manegment
+- chenged the way the speedbrakes are armed - click on the lever
+Note: starting from v1.8.0 FMS version and model version might differ. This is done for the convenience of the customer which does NOT need to update this libraries and redisributables 
+
+1.7.1 change log (all X-Plane 10.30+ 64bit)
+-fixed vertical bearing display causing crash with positive flightpath angle
+-fixed climb calculation above FL410 causing crash with some weights
+-fixed parts of the plane and 3d cockpit disappearing under certain view angles
+-fixed conditions for drawing the missed approach as inactive on the ND
+
+
+1.7.0 change log 
+THIS UPDATE REQUIRES X-PLANE 10.30
+
+Extended pack only:
+-added additional engine variant Rolls-Royce Trent 892-17 to the 777-200ER model which can be set (PW/RR) on the ground through the menu
+-EICAS differences for the three-spool Rolls-Royce Trent
+-added a wonderful new sound set for the Rolls-Royce Trent
+-fixed a crash that could occur when selecting flaps for takeoff calculation for the freighter model
+
+All models (on X-Plane 10.30+ 64bit):
+-NEW NAVDATA FOLDER in X-Plane 10.30:
+The 777 will now load navdata from the Custom Data/ folder of X-Plane. So by installing the navdata update for X-Plane, you automatically have the latest data in the 777 also
+-optimized the FPS in general 
+-optimized CPU usage on low end machines taking advantage of 10.30 rendering features
+-improved taxiing simulation with higher tire grip
+-corrected 25KHz spacing on the COM radios
+-fixed a bug in loading direct-to legs from from .flp file
+-fixed a bug on Windows that would not let you load .flp files from the ROUTE REQUEST page
+-display approach glide path angle on LEGS page
+-improved depiction holdings in lieu of a procedure turn
+-fixed a bug in distance indication on the FIX page
+-added vertical bearing and FPA indication to the VNAV DES page
+-fixed a bug in choosing too low a cruise speed on the last leg to the T/D
+-corrected waypoint selectable for approach intercept, based on selected transition
+
+
+
+1.6.1 change log
+
+Extended pack only:
+-fixed tutorial zoom-in function on -200ER
+-fixed the -200ER gear spring constants so plane squats properly when loaded
+-small fixes in 3d modelling of the -200ER PW engines
+-fixed some 3d objects not being in the correct position on the -200ER, notably the slides
+-corrected ICAO code of the -300ER
+-fixed fuel not loading in center tank on the -200ER model
+
+All models (on X-Plane 10 64bit):
+-enhanced shadows in 3d cockpit
+-fixed takeoff config warning to allow takeoffs with flaps 20
+-fixed glare shield light being always at full brightness when HDR is on
+-installed ISFD in the middle of the standby gauge rack
+-fixed POS REPORT page to show fuel status at last point, instead of next point
+-fixed CRZ page showing N1 for the label but EPR value for EPR controlled engines 
+-corrected several wrong distance and time indications on the FIX page
+-improved company route loading to work with both forms of DCT (directs) found in flight plans generated by simbrief
+-fixed company route only loading the first 9 legs of a flight plan
+-fixed company route name getting truncated when loaded from .flp file
+-fixed a crash that could occur when using VNAV to approach an airport with neither instrument nor visual approach selected
+-improved course guidance in auto land with cross winds
+-improved tire grip in cross wind taxi/takeoff/landing situations
+-improved nose wheel steering
+-fixed ND to show TCAS targets also in CTR MAP mode
+-fixed auto-throttle not disconnecting after auto land
+-fixed a condition where under speed protection could kick-in on the ground, setting TO/GA power unexpectedly
+-fixed a crash when trying to get fuel predictions for alternate airports before performance initialisation is complete
+-made initial approach fixes that are part of feeder segments individually selectable as transitions to final approach
+-added approach intercept function on arrivals page
+
+
+
+1.6.0 change log
+
+Extended Pack only:
+-added 777-200ER variant with Pratt&Whitney PW4090 engine option. This variant comes as a different aircraft. The new aircraft variant has distinct characteristics of:
+--wing without the raked wingtips
+--performance and fuel consumption
+--sound set
+--EEC with EPR as primary control parameter
+--EICAS differences for EPR-controlled engines
+--FMC performance parameters
+-fixed tutorial quick zoom functions for the 300ER model
+-new standby instruments: the -200LR, -LRF and -300ER now have an ISFD as standby instrument, the -200ER has three classic standby instruments
+-corrected reflection and windows on the -300ER model
+
+All models (on X-Plane 10 64bit):
+-new SASL version to fix several crash and DRM problems
+-fixed right engine anti-ice
+-brought back the flap speed placard
+-corrected pushback truck logic
+-corrected the compact fuel indicator and its display logic
+-fixed fuel jettison logic
+-several fixes for the flightcontrol page of the EICAS
+-improved autobrake behavior
+-added autobrake disarm on speedbrake retraction
+-added pdf 2 png HD application, for those who have memory and want more resolution for the maps on the EFB
+-fixed a possible crash in the pax/cargo loading menu
+-fixed a bug where an invisible "blue freeze" screen could cause the mouse pointer to no work anymore
+-fixed the plane refueling itself after reposition through the XP map view
+-implemented fuel temperature indication
+-fixed a bug in direct-to logic where two subsequent directs would delete a wrong waypoint
+-fixed reading Fix-to-DME-distance legs from Navigraph navdata (again!)
+-fixed enumeration of SID transitions, now all available transitions are selectable
+-reworked autoflight behavior with direct-intercept function. Now the autopilot will revert to LNAV arm when the plane is laterally off a manually selected intercept by more than 2.5nm. Intercepting a manually selected course must now be flown in HDG mode until LNAV engages. This is exactly how the real plane works.
+-improved depiction of manual intercept courses on the temporary flightplan
+-added intercept-from functionality to the FMS. Now you can create intercepts into radials going from arbitrary waypoints.
+-fixed a bug where several waypoint combinations in transitions would collapse into one waypoint
+-fixed a bug that could cause the plane fly parallel to the route after an intercept
+-added DEL key assignment for CDU popup
+-changed auto-thrust vs thrust-limit logic. It is now possible to manually increase takeoff power over the preset target when in A/T is in HOLD mode
+-changed EEC characteristic for N1/EPR and command arcs to work more realistically
+-improved interaction of A/T and EEC
+-improved finding of alternate airports
+-fixed a bug that could cause the FMC to not accept new airway entries
+-added the possibility to load flight plans in .flp format, which can be exported by flight planning tools like PFPX and also by online services like simbrief.com
+-corrected FMC and autopilot behavior in the approach phase of non-precision approaches
+-improved autoland capabilities. For all improvements to work, X-Plane 10.30 is required
+-fixed a bug that caused performance info on primary route to be deleted when secondary route was entered
+-fixed a bug in entering LAT/LON waypoints in full format
+-fixed a bug in the display of ETA on T/C and T/D pseudowaypoints
+-fixed a bug in VNAV where a lower speed for a speed restriction was activated too early
+-fixed a bug in VNAV where too high a speed was selected after a crossing restriction
+-improved holdings in cross wind situations
+-fixed several bugs related to flightplan saving and loading. Particularly, approaches with procedure turns and holdings in lieu of procedure turns will now also work when loaded from a saved flightplan
+-improved the calculation of turn radius in holdings. The predicted holding patterns will now match the real performance more closely
+-fixed a bug that could cause indefinitely small holdings to be generated
+-fixed LNAV ignoring the first waypoint of the flightplan if no departure runway was selected
+-improved generating fix-to-DME-distance legs from Aerosoft navdata
+-corrected autopilot bank limits in LNAV mode
+-improved prediction of the turn radius in LNAV mode, generating much smoother interceptions to next leg
+-fixed a bug in turn radius calculation that caused the aircraft to jiggle in procedure turns when flying very slow
+-greatly improved interception of legs at high speeds, i.e. large course changes in the cruise portion of the flightplan will be much smoother
+-added absolute altitude labels to TCAS display
+-corrected TCAS symbol colors and shapes as per TCAS 7.1 specification
+-added DMOD and ZTHR logic to displayed TCAS threats
+-changed TCAS implementation to work on different datarefs for online traffic from xsquawkbox and X-IVAP
+-improved FMC climb predictions especially for long climbs
+-fixed a bug in the autopilot that could cause it to stay in LNAV arm but never engage it even close to the calculated route
+-fixed a bug in the descend speed logic that would override descend speed transitions with higher restriction speeds from previous waypoints
+-working EXEC light on the remote CDU
+
+
+
+1.5.1.1 change log (all XP10 models only)
+
+-corrected engine limits for auto throttle 
+
+
+
+1.5.1 changelog (all XP10 64bit only)
+
+-new gear model and animation for a more realistic appearance on the ground
+-new fanblade animation that looks nicer and is fps-independent
+-corrected reference point of the -300ER, correcting elevator effectiveness at slow speeds
+-fixed a bug in "Real Limits" option that could cause the wrong crash detection to trigger
+-corrected animation of the pushback truck
+-callouts added: V1, approaching minimums (thanks to Pierre Lavaux)
+-corrected callout logic for Baro decision altitude
+-added MCP altitude alert sounds
+-enhanced the  thrust reverser sound
+-corrected some problems with playing PA sounds
+-corrected engine idle/engine out drag
+-enhanced autobrake behavior with pedals
+-enhanced remote CDU graphics and touch responsiveness (thanks to Bradley Fisherman)
+-stab trim indication on FCTL page fixed
+-decreased throttle limit for TO/GA selection on the ground
+-fixed a buffer overflow on the FMC FIX page that could lead to crashes on Windows
+-corrected thrust settings for flight idle descent
+-correct pagination for SIDs with more than 4 airway transitions
+-fixed some typos
+
+
+
+1.5.0 changelog
+
+-new SASL version to fix crashes in X-Plane 10.22 on 64bit Windows (XP10 model only)
+-new HDR exterior lighting, including wing inspection lights (XP10 model only)
+-new HDR interior lighting, new cockpit flood lighting (XP10 model only)
+-new 3d sound engine with tons of new engine sound files (XP10 model only)
+-fixed a bug that caused a crash when entering a malformed LAT/LON waypoint
+-fixed a bug on the FMC FIX page that could lead to an FMC hangup
+-fixed a bug in the VNAV descent slowing the airplane down too early before a restriction
+-airports with no instrument procedures no longer cause FMC hangup
+-fixed a bug in the navdisplay that caused radius-to-fix transition being drawn incorrectly
+-improved stall speeds at higher altitudes. You will see a more accurate depiction of the coffins corner on the PFD
+-fixed animation of ailerons and outer aileron lock-out (XP10 model only)
+-new pushback logic that is less confusing for third-party add ons (XP10 model only)
+-fixed auto brake disarming in taxi when braking on the left side (XP10 model only)
+-fixed auto brake not releasing X-Plane brake when disarming after landing (XP10 model only)
+
+
+
+1.4.2 changelog
+
+-improved fuel and time prediction with high winds
+-improved fuel calculation with directs and flight plan diversions
+-improved fuel prediction to continuously monitor and improve destination fuel predictions based on new wind data
+-fixed a bug that could lead to prolonged taxiing causing wrong fuel-on-board indication
+-fixed a bug in calculation of gross weight
+-fixed a bug in fuel totalizer that could lead to predicting more fuel than actually is on board
+-improved calculation of fuel consumption depending on cost index, will give better predictions for high cost indices
+-fixed a bug in the ABEAM and DIST/ETA point display that could lead to crashes
+-fixed a bug that could prevent selection of the first waypoint as active waypoint
+-fixed a bug that caused a crash on selection of some STARs
+-fixed a small display error of ADFs on NAVRAD page
+-improved LNAV on DME-Arc and Radius-to-Fix transitions, especially if those lead directly to the final approach course
+-improved handling of Navigraph and Aerosoft procedure database and possible mis-encodings - many errors will now be detected before they can cause crashes or lead to flight interruptions
+-several autothrottle modes improved
+-corrected flaps 1 speed 
+-fixed VNAV missing speed restriction on descend below 10.000ft
+-QUAD/RAD holding display fixed
+-fixed active runway not activating when setting via the RTE1 instead of DEPARTURE page
+-abeam point on FIX page logic improved to match original documentation
+-fixed a bug in wind calculation that could lead to overflow on the MCP heading display
+-improved VNAV to not suggest speeds that lead to over- or underspeed conditions
+-fixed a bug in climb thrust calculation that lead to spurious "NAV AIRDATA SYS" fault indications
+-improved intercept to active leg for shallow angles
+-improved DME-arc and Radius-to-Fix legs on navdisplay
+-improved HDG select in MAP modes
+-several small fixes in liveries
+-cold screen (freezing) now depends on custom failures setting
+-fixed autobrake RTO disarm during taxi
+-small checklist corrections
+-fixed animation of transponder knob in 3d cockpit
+-takeoff thrust calculation for sea-level airports in high-pressure areas fixed
+-more commands documented
+
+
+
+1.4.1 changelog
+
+Internal unpublished version
+
+
+1.4 changelog
+
+-64bit support with X-Plane 10.20+
+-4k high resolution textures for the 3d cockpit (X-Plane 10.20+) - we thanks SLAVA and Pavel Pranov
+-improved exterior lighting (X-Plane 10.20+)
+-color corrections on primary EICAS and ENG MFD page
+-corrected autobrake disarm behavior for toe brake pedals
+-corrected autobrake RTO for subsequent takeoff attempts
+-corrected speed brake warnings
+-corrected COM frequency range for 12.5kHz spaced radios
+-improved ADIRU alignment behavior and corrected ALIGNMENT REINITIATED message
+-corrected several inaccuracies on the FIX page
+-fixed a bug that could lead to crashes when using the FIX page
+-fixed place-bearing-distance and place-bearing-waypoints not always using correct magvar
+-fixed lat/lon waypoint naming 
+-corrected ND drawing of active runway at destination airport 
+-corrected ND drawing of fix bearing lines
+-corrected abeam fix function
+-corrected copying of place-bearing-distance waypoints for duplicate fixes
+-improved display of climb restrictions on CLB and CRZ pages
+-improved VNAV climb behavior for at-or-below restrictions in a departure
+-fixed FMC mach intervention on CRZ page
+-improved AFDS behavior in LOC and APP mode
+-improved AFDS in go-around and implemented more go-around logic
+-improved AFDS roll behavior
+-corrected autothrottle manual disconnect warning
+-corrected autothrottle idle in manual landing
+-added a separate command for autothrottle disconnect
+-improved timing for go-around thrust limits
+-implemented automatic runway HDG alignment in LOC and APP mode
+-improved various LNAV leg combinations like course-to-distance after course-to-radial
+-theta value and dme distance are now also working with broken Navigraph data and behave the same as Aerosoft data
+-corrected DIR-to and other flightplan edits deleting too many waypoints under some conditions
+-corrected sequencing of "missed" TF legs when diverting from route up to 20nm e.g. to avoid adverse weather
+-removed incorrectly displayed airports from LEGS page
+-fixed crash that occured when trying to insert an alternate airport into an empty route
+
+
+1.3 changelog
+Internal unpublished version
+
+
+1.2 changelog
+-enhanced 3d-cockpit in X-Plane 10, lots of button animations improved
+-enhanced lighting of ground vehicles in X-Plane 10
+-better ground handling
+-roll and yaw stability adjusted
+-tweaked fuel consumption in X-Plane 10 for more accuracy on long hauls
+-full support for Aerosoft Navdata Pro with enhancements unique to NDP like Gate-Positions and RNP values
+-improved navdisplay drawing procedures more accurately
+-fixed several situations that caused broken lines or gaps on navdisplay
+-fixed an error in estimated time display
+-improved LNAV with correct turn restrictions, better handling of course-to-fix and course-to-along-track-distance legs
+-improved behavior of altitude-dependent waypoints
+-improved calculation and display of dependent intercepts
+-improved interception of DME-Arcs
+-X-Plane 10 autopilot improved, smoother turns at medium and high speeds and more accurate turn anticipation
+-improved autopilot behavior when engaging VNAV SPD after takeoff
+-fixed autopilot sometimes not tracking LNAV after go-around
+-fixed a bug that could cause losing the active waypoint when changing an approach or transition
+-fixed bug in holding at end of missed approaches
+-improved fuel and time calculation after direct-to/shortcuts
+-tweaked calculation of top-of-climb point
+-tweaked POS REPORT and PROGRESS pages
+-tweaked LEGS page behavior on cancelation
+-improved speed restriction logic on descend
+-improved VNAV descend and early descend profiles
+-improved VNAV behavior with direct-to and shortcuts
+-remote CDU styles tweaked for better readability
+-remote CDU imposes touch-scroll restrictions only when actually running on an iPad
+-fixed a bug that could lead to crashes on Linux 
