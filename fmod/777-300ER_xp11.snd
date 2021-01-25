@@ -1,0 +1,411 @@
+A
+1000
+ACF_SOUNDS
+
+# Spaces 
+
+# Cockpit
+BEGIN_SOUND_SPACE
+        SOUND_INDEX 0
+        BLEDN_DEPTH 0.1
+        AABB -1.884439 0.000 -27.87079 1.884439 2.831042 -24.846714
+END_SOUND_SPACE
+
+# Cabin
+BEGIN_SOUND_SPACE
+        SOUND_INDEX 1
+        BLEND_DEPTH 0.1
+        AABB -3.116291 0.000 -24.846713 3.116291 3.791615 20.105753
+END_SOUND_SPACE 
+# -------------------------------------------------------------------------------------
+# Snapshots
+
+# mute
+BEGIN_SOUND_ATTACHMENT
+        SNAPSHOT_NAME /mute
+        VEH_XYZ 0.000 0.000 0.000
+        EVENT_START_COND sim/time/total_flight_time_sec <= 0
+        EVENT_END_COND sim/time/total_flight_time_sec == 15
+END_SOUND_ATTACHMENT
+
+# FLDoor
+BEGIN_SOUND_ATTACHMENT
+        SNAPSHOT_NAME /DoorFL
+        VEH_XYZ -2.898868 1.684657 -11.527958
+        EVENT_START_COND anim/LFmov/door > 0
+        EVENT_END_CON anim/LFmov/door == 0
+END_SOUND_ATTACHMENT
+
+# FRDoor
+BEGIN_SOUND_ATTACHMENT
+        SNAPSHOT_NAME /DoorFR
+        VEH_XYZ 2.898868 1.684657 -11.527958
+        EVENT_START_COND anim/RFmov/door > 0
+        EVENT_END_CON anim/RFmov/door == 0
+END_SOUND_ATTACHMENT
+
+# BLDoor
+BEGIN_SOUND_ATTACHMENT
+        SNAPSHOT_NAME /DoorBL
+        VEH_XYZ -2.898868 -1.684657 7.537649
+        EVENT_START_COND anim/LBmov/door > 0
+        EVENT_END_CON anim/LBmov/door == 0
+END_SOUND_ATTACHMENT
+
+# BRDoor
+BEGIN_SOUND_ATTACHMENT
+        SNAPSHOT_NAME /DoorBL
+        VEH_XYZ -2.898868 -1.684657 7.537649
+        EVENT_START_COND anim/RBmov/door > 0
+        EVENT_END_CON anim/RBmov/door == 0
+END_SOUND_ATTACHMENT
+
+# Cockpit
+BEGIN_SOUND_ATTACHMENT
+        SNAPSHOT_NAME /cockpit
+        VEH_XYZ 0.000 1.500 -26.67354
+        PARAM_DREF_IDX 0
+        EVENT_START_COND sim/operation/sound/inside_ratio[0] != 0
+	EVENT_END_COND sim/operation/sound/inside_ratio[0] == 0
+END_SOUND_ATTACHMENT
+
+# Cabin
+BEGIN_SOUND_ATTACHMENT
+        SNAPSHOT_NAME /cabin
+        VEH_XYZ 0.000 1.500 -24.60861
+        PARAM_DREF_IDX 1
+	EVENT_START_COND sim/operation/sound/inside_ratio[1] != 0
+	EVENT_END_COND sim/operation/sound/inside_ratio[1] == 0
+END_SOUND_ATTACHMENT        
+# -----------------------------------------------------------------------------------
+# Engines
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /EngineL
+        VEH_PART engine 0
+        PARAM_DREF_IDX 0
+        EVENT_START_COND sim/cockpit2/engine/indicators/N1_percent[0] > 0
+        EVENT_END_COND sim/cockpit2/engine/indicators/N1_percent[0] == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /ReverseL
+        VEH_PART engine 0
+        PARAM_DREF_IDX 0
+        EVENT_START_COND sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0] > 0
+        EVENT_END_COND sim/flightmodel2/engines/thrust_reverser_deploy_ratio[0] == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+          EVENT_NAME /Engine_StartL
+          VEH_PART engine 0
+          PARAM_DREF_IDX 0
+          EVENT_START_COND MoNlc/B777/engines/startL == 1
+          EVENT_END_COND MoNlc/B777/engines/startL == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Engine_ShutdownL
+        VEH_PART engine 0
+        PARAM_DREF_IDX 0
+        EVENT_START_COND MoNlc/B777/engines/shutdownL == 1
+        EVENT_END_COND sim/cockpit2/engine/indicators/N2_percent[0] <= 10
+END_SOUND_ATTACHMENT          
+#-----------------------------------------------------------------------------------------
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /EngineR
+        VEH_PART engine 1
+        PARAM_DREF_IDX 1
+        EVENT_START_COND sim/cockpit2/engine/indicators/N1_percent[1] > 0
+        EVENT_END_COND sim/cockpit2/engine/indicators/N1_percent[1] == 0
+END_SOUND_ATTACHMENT
+
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /ReverseR
+        VEH_PART engine 1
+        PARAM_DREF_IDX 1
+        EVENT_START_COND sim/flightmodel2/engines/thrust_reverser_deploy_ratio[1] > 0
+        EVENT_END_COND sim/flightmodel2/engines/thrust_reverser_deploy_ratio[1] == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Engine_StartR
+        VEH_PART engine 1
+        PARAM_DREF_IDX 1
+        EVENT_START_COND MoNlc/B777/engines/startR == 1 
+        EVENT_END_COND MoNlc/B777/engines/startR == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Engine_ShutdownR
+        VEH_PART engine 1
+        PARAM_DREF_IDX 1
+        EVENT_START_COND MoNlc/B777/engines/shutdownR == 1
+        EVENT_END_COND sim/cockpit2/engine/indicators/N2_percent[1] <= 10
+END_SOUND_ATTACHMENT 
+#----------------------------------------------------------------------------------------
+# Systems
+
+# APU
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /APU_Start
+        VEH_XYZ 0.000 1.347757 28.177782
+        EVENT_START_COND DELTA=sim/cockpit2/electrical/APU_N1_percent > 0
+        EVENT_END_COND sim/cockpit2/electrical/APU_N1_percent == 100
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /APU
+        VEH_XYZ 0.000 1.347757 28.177782
+        EVENT_START_COND sim/cockpit2/electrical/APU_N1_percent == 100
+        EVENT_END_COND sim/cockpit2/electrical/APU_N1_percent == 0
+END_SOUND_ATTACHMENT
+
+# Hydraulics
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Hydraulic
+        VEH_XYZ 0.000 -0.550 6.386334
+        EVENT_START_COND sim/cockpit2/hydraulics/indicators/hydraulic_pressure_1 > 0
+        EVENT_END_COND sim/cockpit2/hydraulics/indicators/hydraulic_pressure_1 == 0
+END_SOUND_ATTACHMENT
+
+# Flaps
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Flaps
+        VEH_XYZ 0.000 -0.550 6.386334
+        EVENT_START_COND ABS_DELTA=sim/flightmodel2/wing/flap1_deg[0] > 0
+        EVENT_END_COND ABS_DELTA=sim/flightmodel2/wing/flap1_deg[0] == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Flaps_stop
+        VEH_XYZ 0.000 -0.550 6.386334
+        EVENT_START_COND ABS_DELTA=sim/flightmodel2/wing/flap1_deg[0] == 0
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+# Contactors
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Contactor
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit/electrical/gpu_on == 1
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Contactor2
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit/electrical/gpu_on == 0
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT  
+      
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Contactor3
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit2/electrical/APU_generator_on == 1 
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Contactor4
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit2/electrical/APU_generator_on == 0 
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Contactor5
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit2/electrical/APU_generator_on == 0 
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Contactor7
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit2/electrical/generator_on[0] >= 1 
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Contactor6
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit2/electrical/generator_on[0] == 0 
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Contactor8
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit2/electrical/generator_on[1] >= 1 
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Contactor9
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit2/electrical/generator_on[1] == 0 
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+# Avionics
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Avionics
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit2/switches/avionics_power_on == 1
+        EVENT_END_COND sim/cockpit2/switches/avionics_power_on == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Avionics_Test
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit2/switches/avionics_power_on == 1
+        EVENT_END_COND sim/cockpit2/switches/avionics_power_on == 0
+END_SOUND_ATTACHMENT
+
+# Gear
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Gear_Wind
+        VEH_XYZ 0.000 -0.550 6.386334
+        EVENT_START_COND anim/front/gear < 1
+        EVENT_END_COND anim/front/gear == 1
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Gear_down
+        VEH_XYZ 0.000 -0.550 6.386334
+        EVENT_START_COND DELTA=anim/front/gear < 0
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Gear_up
+        VEH_XYZ 0.000 -0.550 6.386334
+        EVENT_START_COND DELTA=anim/front/gear > 0
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+# Drag Noises
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Drag_Rumble
+        VEH_XYZ 0.000 -0.550 6.386334
+        EVENT_START_COND sim/flightmodel/position/true_airspeed != 0
+        EVENT_END_COND sim/flightmodel/position/true_airspeed == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /PacksL
+        VEH_XYZ 0.000 1.500 -25.963329
+        EVENT_START_COND 1-sim/sound/packL > 0
+        EVENT_End_COND 1-sim/sound/packL == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /PacksR
+        VEH_XYZ 0.000 1.500 0.000
+        EVENT_START_COND 1-sim/sound/packR > 0
+        EVENT_End_COND 1-sim/sound/packR == 0
+END_SOUND_ATTACHMENT
+
+# Electrical
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Battery_Start
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit/electrical/battery_on == 1
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+
+#-----------------------------------------------------------------------------------
+# Alerts
+
+# Passenger signs/ cabin calls
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Passenger
+        VEH_XYZ 0.000 2.000 0.000 
+        EVENT_START_COND sim/cockpit2/annunciators/fasten_seatbelt == 0
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Passenger2
+        VEH_XYZ 0.000 2.000 0.000 
+        EVENT_START_COND sim/cockpit2/annunciators/fasten_seatbelt == 1
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Passenger3
+        VEH_XYZ 0.000 2.000 0.000 
+        EVENT_START_COND sim/cockpit2/annunciators/fasten_seatbelt == 2
+        EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+#BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /attendant
+        VEH_XYZ 0.000 2.000 0.000 
+        EVENT_START_COND
+        EVENT_END_COND
+#END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Aural_Warning_Test
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND sim/cockpit2/switches/avionics_power_on == 1
+        EVENT_END_COND sim/cockpit2/switches/avionics_power_on == 0
+END_SOUND_ATTACHMENT
+
+#------------------------------------------------------------------------------------
+# Cockpit
+
+#Flapleaver
+#BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Flap_Leaver1
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND inst/flap_req_deg_ratio == 0
+        EVENT_AUTO_END_FROM_START_COND
+#END_SOUND_ATTACHMENT
+
+#BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Flap_Leaver2
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND anim/flap == 0.750499
+        EVENT_AUTO_END_FROM_START_COND
+#END_SOUND_ATTACHMENT
+
+#BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Flap_Leaver3
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND inst/flap_req_deg_ratio == 0.166668
+        EVENT_AUTO_END_FROM_START_COND
+#END_SOUND_ATTACHMENT
+
+#BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Flap_Leaver4
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND inst/flap_req_deg_ratio == 0.5
+        EVENT_AUTO_END_FROM_START_COND
+#END_SOUND_ATTACHMENT
+
+#BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Flap_Leaver5
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND inst/flap_req_deg_ratio == 0,666667
+        EVENT_AUTO_END_FROM_START_COND
+#END_SOUND_ATTACHMENT
+
+#BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Flap_Leaver6
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND inst/flap_req_deg_ratio == 0.833332
+        EVENT_AUTO_END_FROM_START_COND
+#END_SOUND_ATTACHMENT
+
+#BEGIN_SOUND_ATTACHMENT
+        EVENT_NAME /Flap_Leaver7
+        VEH_XYZ 0.000 -0.600 -26.772644
+        EVENT_START_COND inst/flap_req_deg_ratio == 1
+        EVENT_AUTO_END_FROM_START_COND
+#END_SOUND_ATTACHMENT
+
+
