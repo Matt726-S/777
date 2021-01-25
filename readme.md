@@ -20,7 +20,7 @@ Simply drag the files into your Boeing777 install after unzipping. BE SURE TO BA
 
 Notice: Every time FF makes an update, you must reinstall the mod each time.
 
-ISSUES As of beta v0.1.3:
+ISSUES As of beta v0.1.4:
 -Packs sounds too loud
 -Packs can be heard in outside view if you move the camera close enough to the plane
 -still trying to fix the EICAS texts and digits issue
@@ -29,6 +29,9 @@ ISSUES As of beta v0.1.3:
 -Fahrenheit got banned from his computer lol so he cant work
 
 CHANGELOG:
+
+VERSION: beta 0.1.4:
+-added extended pack FMOD by Nutshell Pilot
 
 VERSION: beta v0.1.3:
 -Removed broken PFD texture
